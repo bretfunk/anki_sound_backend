@@ -1,4 +1,5 @@
 class PhrasesController < ApplicationController
+  before_action :authenticate_user
   before_action :set_phrase, only: [:show, :update, :destroy]
 
   # GET /phrases

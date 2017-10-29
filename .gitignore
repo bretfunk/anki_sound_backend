@@ -17,3 +17,6 @@
 
 #swagger jSON files
 /public/apidocs/
+
+# Ignore application configuration
+/config/application.yml
