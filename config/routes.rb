@@ -11,8 +11,8 @@ Rails.application.routes.draw do
     get "/phrases", to: "phrases#index"
 
     #if credientals are valid, knock returns an access token for the api
+    post "user_token" => "user_token#create"
 
   end
-    post "user_token" => "user_token#create"
 
 end
