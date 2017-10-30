@@ -5,7 +5,8 @@ EMAIL.map do |email|
   3.times { new_user.phrases << Phrase.create(phrase: PHRASES.sample, language: "English") }
 
 User.create(email: 'bret@bret', password: "test")
-User.last.phrases << PHRASES.sample
+User.last.phrases << Phrase.first
+User.last.phrases << Phrase.last
 end
 
 
