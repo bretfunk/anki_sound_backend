@@ -1,10 +1,11 @@
 class PhrasesController < ApplicationController
-  #before_action :authenticate_user
+  before_action :authenticate_user
   before_action :set_phrase, only: [:show, :update, :destroy]
 
   # GET /phrases
   def index
-    @phrases = Phrase.all
+    @phrases = current_user.phrases
+    #@phrases = Phrase.all
 
     render json: @phrases
   end
