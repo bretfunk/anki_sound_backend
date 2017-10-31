@@ -6,12 +6,17 @@ Rails.application.routes.draw do
   get "/password", to: "password#show"
 
   scope "/api" do
-    #list all phrases for everyone, with password verification so only logged in users can see
-    #the front end will parese the data and only show the user their phrases
+    #only shows current users phrases
     get "/phrases", to: "phrases#index"
+
+    #create new phrase
+    post "/phrases", to: "phrases#create"
 
     #if credientals are valid, knock returns an access token for the api
     post "user_token" => "user_token#create"
+
+    #add new user
+    post "/users", to: "users#create"
 
   end
 

@@ -1,5 +1,5 @@
 class PhrasesController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user, only: [:index]
   before_action :set_phrase, only: [:show, :update, :destroy]
 
   # GET /phrases
@@ -20,6 +20,7 @@ class PhrasesController < ApplicationController
     @phrase = Phrase.new(phrase_params)
 
     if @phrase.save
+      current_user.phrases << @phrase
       render json: @phrase, status: :created, location: @phrase
     else
       render json: @phrase.errors, status: :unprocessable_entity
@@ -48,6 +49,6 @@ class PhrasesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def phrase_params
-      params.require(:phrase).permit(:phrase, :language)
+      params.permit(:phrase, :language, :user_id)
     end
 end

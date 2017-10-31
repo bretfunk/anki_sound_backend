@@ -6,7 +6,7 @@ EMAIL.map do |email|
   puts("user #{email} created!")
 end
 
-User.create(email: 'bret', password: "test")
+User.create(email: 'bret@bret', password: "test")
 User.last.phrases << Phrase.first
 User.last.phrases << Phrase.last
 puts("user #{User.last.email} created!")
