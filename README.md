@@ -4,16 +4,16 @@ This README is for the backend portion of the AnkiSound application.  This backe
 ## Endpoints:
 
 #### Public:
-Generic welcome message with avaiable API endpoints..
-1. /
+##### Generic welcome message with avaiable API endpoints
+* /
 
-#### Protected:..
+#### Protected:
 
-* Shows the current user's information (id, email, password_digest)..
-1. /api/user ..
+##### Shows the current user's information (id, email, password_digest)
+* /api/user
 
-* Shows the current user's phrases (phrase, language)..
-2. /api/phrases
+##### Shows the current user's phrases (phrase, language)
+* /api/phrases
 
 
 ## Ruby version
@@ -28,22 +28,22 @@ Generic welcome message with avaiable API endpoints..
 3. The test suite is written using factory_bot_rails and shoulda-matchers.
 
 ## Services (job queues, cache servers, search engines, etc.)
-1 There are no services in this application. 
-2 This application is API only.
+1. There are no services in this application. 
+2. This application is API only.
 
 ## Deployment instructions
 
 1. Clone down the repo using the command below in your terminal:
-- git clone https://github.com/bretfunk/anki_sound_backend
+- $ git clone https://github.com/bretfunk/anki_sound_backend
 
 2. Change directory into the anki_sound_backend directory
-- cd anki_sound_backend
+- $ cd anki_sound_backend
 
 3. Create the database, run the migrations, and run the seed file:
-- rake db:setup
+- $ rake db:setup
 
 4. Start up your server:
-- rails s
+- $ rails s
 
 * Keep in mind that the front end app is built to work with the heroku app so you will need to change your front end application to access your localhost or wherever you deploy your application.
 
