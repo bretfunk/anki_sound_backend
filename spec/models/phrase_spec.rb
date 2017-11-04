@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Phrase, type: :model do
   context "valid attributes" do
-    it { should validate_presence_of(:email) }
-    it { should validate_presence_of(:password) }
+    it { should validate_presence_of(:phrase) }
+    it { should validate_presence_of(:language) }
 
     it "has valid attributes" do
-      user = create(:user)
-      expect(user.email).to eq('elon@spacex.com')
-      expect(user.password_digest).to eq('AIwillkillusall')
+      phrase = create(:phrase)
+      expect(phrase.phrase).to eq('I love you')
+      expect(phrase.language).to eq('English')
     end
   end
   context "associations" do
-    it { should have_many(:phrases) }
+    it { should belong_to(:user) }
 
     it "has valid assocations" do
       user = create(:user)
@@ -24,3 +24,4 @@ RSpec.describe User, type: :model do
     end
   end
 end
+

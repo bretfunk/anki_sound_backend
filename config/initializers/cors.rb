@@ -7,8 +7,10 @@
 
  Rails.application.config.middleware.insert_before 0, Rack::Cors do
    allow do
-     origins 'https://protected-thicket-11517.herokuapp.com/'
-     origins 'localhost:3000'
+     #origins 'https://protected-thicket-11517.herokuapp.com/'
+     #origins 'localhost:3000'
+     origins 'http://localhost:3000'
+     #origins 'http://soundoftext.com'
 
      resource '*',
        headers: :any,
