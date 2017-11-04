@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    render html: "The only endpoint is:\n\n'/api/phrases'\n\nand can only be accessed\nwith proper authorization"
+    words = "The only endpoints are:\n\n'/api/phrases' and '/api/user'\n\nand can only be accessed with proper authorization"
+    render html: words
   end
 end
