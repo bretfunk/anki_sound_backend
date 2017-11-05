@@ -7,6 +7,18 @@ class PhrasesController < ApplicationController
     render json: @phrases
   end
 
+  # POST /phrases
+  def create
+    @phrase = Phrase.new(phrase_params)
+
+    if @phrase.save
+      current_user.phrases << @phrase
+      render json: @phrase, status: :created, location: @phrase
+    else
+      render json: @phrase.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   # Only allow a trusted parameter "white list" through.
