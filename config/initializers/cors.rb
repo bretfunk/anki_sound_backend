@@ -11,6 +11,7 @@
      #origins 'localhost:3000'
      origins 'http://localhost:3000'
      origins 'https://bretfunk.github.io/anki_sound_frontend/'
+     origins 'https://bretfunk.github.io'
      #origins 'http://soundoftext.com'
 
      resource '*',
