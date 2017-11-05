@@ -10,6 +10,7 @@
      #origins 'https://protected-thicket-11517.herokuapp.com/'
      #origins 'localhost:3000'
      origins 'http://localhost:3000'
+     origins 'https://bretfunk.github.io/anki_sound_frontend/'
      #origins 'http://soundoftext.com'
 
      resource '*',
