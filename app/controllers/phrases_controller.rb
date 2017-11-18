@@ -19,6 +19,13 @@ class PhrasesController < ApplicationController
     end
   end
 
+  def destroy
+    phrase = params[:phrase]
+    user_id = params[:user_id]
+    to_delete = User.find(user_id).phrases.find_by(phrase: phrase)
+    to_delete.destroy
+  end
+
   private
 
   # Only allow a trusted parameter "white list" through.

@@ -7,8 +7,7 @@
 
  Rails.application.config.middleware.insert_before 0, Rack::Cors do
    allow do
-     origins 'http://localhost:3000', 'https://bretfunk.github.io/anki_sound_frontend/'
-     #origins 'https://bretfunk.github.io'
+     origins 'http://localhost:3000', 'https://bretfunk.github.io/anki_sound_frontend/', 'https://bretfunk.github.io'
 
      resource '*',
        headers: :any,

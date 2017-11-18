@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     #the front end will parese the data and only show the user their phrases
     get "/phrases", to: "phrases#index"
     post "/phrases", to: "phrases#create"
+    delete "/phrases", to: "phrases#destroy"
 
     #get the id of the current user for database entry
     get "/user", to: "users#index"
