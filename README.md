@@ -1,4 +1,6 @@
 # README
+UPDATE: This app is currently being rebuilt and only works correctly on localhost.  For a demo of an earlier version, click here: https://www.youtube.com/watch?v=3ly823FDBK0&t=6s
+
 This README is for the backend portion of the AnkiSound application.  This backend provides API endpoints of users and phrases so that the frontend portion (https://github.com/bretfunk/anki_sound_frontend) can access the data.  This data is public but is protected with the Knock authentication gem.  A token verifying that a user is in the database is required in order to access the endpoints.  A live version of this app can be seen here: https://anki-sound-backend.herokuapp.com/
 
 ## Endpoints:

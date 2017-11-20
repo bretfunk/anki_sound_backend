@@ -37,6 +37,7 @@ gem 'txt2speech'
 gem 'espeak-ruby', require: 'espeak'
 #gem 'activesupport-json_encoder'
 gem 'rails_12factor'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
