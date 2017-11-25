@@ -7,8 +7,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore sound files.
-#/public
 
 # Ignore all logfiles and tempfiles.
 /log/*
