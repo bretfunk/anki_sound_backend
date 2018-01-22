@@ -1,4 +1,3 @@
-#require 'tts'
 
 class AudioController < ApplicationController
 

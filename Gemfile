@@ -38,7 +38,6 @@ gem 'espeak-ruby', require: 'espeak'
 #gem 'activesupport-json_encoder'
 gem 'rails_12factor'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem "paperclip"
 gem "aws-sdk-s3"
 
 group :development, :test do
